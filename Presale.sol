@@ -19,9 +19,9 @@ library PresaleConstants {
   uint constant PRESALE_START_TIME = 1624543200;
   uint constant PRESALE_END_TIME = 1624629600;
   uint256 constant PRESALE_EXCHANGE_RATE = 200000;      // 1 BNB ~ 200000 TIU
-  uint256 constant PRESALE_MIN_AMOUNT = 2e18;         // 1 BNB
+  uint256 constant PRESALE_MIN_AMOUNT = 1e18;         // 1 BNB
   uint256 constant PRESALE_MAX_AMOUNT = 10e18;         // 10 BNB
-  uint256 constant PRESALE_WHITELIST_AMOUNT = 667e18;  // 500 BNB
+  uint256 constant PRESALE_WHITELIST_AMOUNT = 500e18;  // 500 BNB
 }
 
 contract TIUPresale is Ownable {
@@ -66,7 +66,7 @@ contract TIUPresale is Ownable {
     whitelistSaleTotal = PresaleConstants.PRESALE_WHITELIST_AMOUNT.mul(PresaleConstants.PRESALE_EXCHANGE_RATE);
 
     // add whitelist addresses
-    configWhitelist(0x79d373B6f115269E401573aB3891aB4D51c0C891, true);
+    configWhitelist(0xFdD6c8868983f60d635161A20c9A46C002Af7B09, true);
   }
 
   receive() payable external {}
