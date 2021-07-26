@@ -16,8 +16,8 @@ interface TIUFPool {
 
 library PresaleConstants {
   // presale
-  uint constant PRESALE_START_TIME = 1624543200;
-  uint constant PRESALE_END_TIME = 1624629600;
+  uint constant PRESALE_START_TIME = 1627776000;
+  uint constant PRESALE_END_TIME = 1628208000;
   uint256 constant PRESALE_EXCHANGE_RATE = 200000;      // 1 BNB ~ 200000 TIU
   uint256 constant PRESALE_MIN_AMOUNT = 1e18;         // 1 BNB
   uint256 constant PRESALE_MAX_AMOUNT = 10e18;         // 10 BNB
