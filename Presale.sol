@@ -10,7 +10,7 @@ import "./Constants.sol";
 import "./interfaces/IPancakeRouter02.sol";
 import "./interfaces/IPancakeFactory.sol";
 
-interface IMRFPool {
+interface TIUFPool {
   function depositTo(uint256 _pid, uint256 _amount, address _to) external;
 }
 
@@ -18,13 +18,13 @@ library PresaleConstants {
   // presale
   uint constant PRESALE_START_TIME = 1624543200;
   uint constant PRESALE_END_TIME = 1624629600;
-  uint256 constant PRESALE_EXCHANGE_RATE = 3000;      // 1 BNB ~ 3000 MRF
-  uint256 constant PRESALE_MIN_AMOUNT = 2e18;         // 2 BNB
+  uint256 constant PRESALE_EXCHANGE_RATE = 200000;      // 1 BNB ~ 200000 TIU
+  uint256 constant PRESALE_MIN_AMOUNT = 2e18;         // 1 BNB
   uint256 constant PRESALE_MAX_AMOUNT = 10e18;         // 10 BNB
-  uint256 constant PRESALE_WHITELIST_AMOUNT = 667e18;  // 667 BNB
+  uint256 constant PRESALE_WHITELIST_AMOUNT = 667e18;  // 500 BNB
 }
 
-contract MRFPresale is Ownable {
+contract TIUPresale is Ownable {
   using SafeMath for uint256;
   using SafeBEP20 for IBEP20;
 
@@ -109,7 +109,7 @@ contract MRFPresale is Ownable {
 
   function deposit() public payable {
     address user = msg.sender;
-    uint256 amount = msg.value.mul(exchangeRate); // convert BNB to MRF amount
+    uint256 amount = msg.value.mul(exchangeRate); // convert BNB to TIU amount
 
     require(now >= startTime || now <= endTime, "!open");
 
