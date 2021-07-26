@@ -1,2 +1,2 @@
-# Mars Landing Token Sale
+# MARS LANDING ♂ (TIU)⚡️ Private Sale
 Private Sale
