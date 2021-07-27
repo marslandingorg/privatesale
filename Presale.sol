@@ -92,12 +92,6 @@ contract TIUPresale is Ownable {
       return 0;
     }
 
-    //Only whitelisted users
-    if(!whitelist[account]) {
-      return 0;
-    }
-
-
     available = maxAmount.sub(balance[account]);
 
     if (available > whitelistSaleTotal) {
